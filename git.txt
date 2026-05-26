@@ -1,0 +1,718 @@
+====================================================
+GIT FOR DEVOPS
+====================================================
+
+What is Git?
+
+Git is a distributed version control system used to track
+changes in files and source code.
+
+Simple meaning:
+
+Git remembers every change we make in our project.
+
+Think like this:
+
+Without Git:
+
+Day 1:
+project.py
+
+Day 5:
+project.py modified
+
+Day 10:
+Oops... file deleted by mistake
+
+Problem:
+
+No backup
+No history
+No way to return
+
+With Git:
+
+Day 1 → Version 1
+Day 5 → Version 2
+Day 10 → Version 3
+
+Can go back anytime.
+
+----------------------------------------------------
+
+Why Git is needed?
+
+Suppose 5 developers are working on the same project.
+
+Problems without Git:
+
+• Code gets overwritten
+• No tracking
+• Hard to collaborate
+• No rollback
+• Difficult to identify bugs
+• No version history
+
+Git solves:
+
+• Tracks changes
+• Team collaboration
+• Branching
+• Version history
+• Rollback support
+• Code backup
+
+----------------------------------------------------
+
+What is Version Control?
+
+Version Control means managing changes in files over time.
+
+Example:
+
+Resume_v1
+
+Resume_v2
+
+Resume_v3
+
+Resume_final
+
+Resume_final_latest
+
+Resume_final_latest2
+
+Very confusing.
+
+Git automatically manages all versions.
+
+----------------------------------------------------
+
+Types of Version Control Systems
+
+1. Local Version Control
+
+Stores versions on same system.
+
+Problem:
+
+If system crashes everything lost.
+
+----------------------------------------------------
+
+2. Centralized Version Control
+
+Examples:
+
+SVN
+
+Architecture:
+
+Users
+   ↓
+Central Server
+
+Problem:
+
+If server crashes everything affected.
+
+----------------------------------------------------
+
+3. Distributed Version Control
+
+Examples:
+
+Git
+
+Architecture:
+
+Developer1 ←→ Repository ←→ Developer2
+       ↑
+       ↓
+   Local Copy
+
+Advantages:
+
+• Every developer has complete copy
+• Faster
+• Better backup
+• Works offline
+
+----------------------------------------------------
+
+GIT ARCHITECTURE
+
+Working Directory
+        ↓
+Staging Area
+        ↓
+Local Repository
+        ↓
+Remote Repository
+
+----------------------------------------------------
+
+Understanding each layer
+
+1. Working Directory
+
+Current files where coding happens.
+
+Example:
+
+project/
+
+    index.html
+    style.css
+    app.js
+
+----------------------------------------------------
+
+2. Staging Area
+
+Temporary area before commit.
+
+Purpose:
+
+Select what changes should go into next version.
+
+Command:
+
+git add file.txt
+
+----------------------------------------------------
+
+3. Local Repository
+
+Stores commit history locally.
+
+Command:
+
+git commit
+
+----------------------------------------------------
+
+4. Remote Repository
+
+Online repository.
+
+Examples:
+
+GitHub
+GitLab
+Bitbucket
+
+----------------------------------------------------
+
+Complete Git Workflow
+
+Create file
+
+↓
+
+Modify file
+
+↓
+
+git add
+
+↓
+
+git commit
+
+↓
+
+git push
+
+↓
+
+GitHub
+
+----------------------------------------------------
+
+Important Git Terminologies
+
+Repository
+
+Storage location of project files.
+
+Can be:
+
+Local Repository
+
+Remote Repository
+
+----------------------------------------------------
+
+Commit
+
+Commit means saving snapshot of current changes.
+
+Example:
+
+git commit -m "Added login page"
+
+Why commit?
+
+Allows returning to specific point.
+
+----------------------------------------------------
+
+Branch
+
+Branch means creating separate working area.
+
+Purpose:
+
+Allows working independently.
+
+Example:
+
+main
+
+    |
+
+    |------ login-feature
+
+    |
+
+    |------ payment-feature
+
+----------------------------------------------------
+
+Merge
+
+Combines branches together.
+
+----------------------------------------------------
+
+Clone
+
+Copies existing repository.
+
+----------------------------------------------------
+
+Pull Request (PR)
+
+Request to merge changes.
+
+Flow:
+
+Developer
+
+↓
+
+Create branch
+
+↓
+
+Write code
+
+↓
+
+Push branch
+
+↓
+
+Create PR
+
+↓
+
+Code review
+
+↓
+
+Merge
+
+----------------------------------------------------
+
+INITIAL GIT CONFIGURATION
+
+Configure username:
+
+git config --global user.name "Lakshmi Nandan"
+
+Purpose:
+
+Sets username
+
+----------------------------------------------------
+
+Configure email:
+
+git config --global user.email "email@gmail.com"
+
+Purpose:
+
+Sets email
+
+----------------------------------------------------
+
+View configuration:
+
+git config --list
+
+----------------------------------------------------
+
+INITIALIZE REPOSITORY
+
+git init
+
+Purpose:
+
+Creates new Git repository.
+
+What happens internally?
+
+Creates hidden folder:
+
+.git
+
+Inside .git:
+
+objects/
+
+refs/
+
+HEAD
+
+config
+
+logs/
+
+----------------------------------------------------
+
+Check hidden files:
+
+ls -la
+
+----------------------------------------------------
+
+CHECK FILE STATUS
+
+git status
+
+Purpose:
+
+Shows:
+
+• Untracked files
+• Modified files
+• Staged files
+
+Example:
+
+Untracked:
+
+notes.txt
+
+Modified:
+
+app.js
+
+----------------------------------------------------
+
+ADDING FILES
+
+git add file.txt
+
+Purpose:
+
+Moves file to staging area
+
+----------------------------------------------------
+
+Add all files:
+
+git add .
+
+----------------------------------------------------
+
+Add multiple files:
+
+git add file1 file2
+
+----------------------------------------------------
+
+COMMIT CHANGES
+
+git commit -m "Added login functionality"
+
+Purpose:
+
+Creates snapshot of current project
+
+----------------------------------------------------
+
+VIEW COMMIT HISTORY
+
+git log
+
+Shows:
+
+• Commit ID
+• Author
+• Date
+• Message
+
+----------------------------------------------------
+
+Short log:
+
+git log --oneline
+
+----------------------------------------------------
+
+BRANCH COMMANDS
+
+See branches:
+
+git branch
+
+----------------------------------------------------
+
+Create branch:
+
+git branch feature-login
+
+----------------------------------------------------
+
+Switch branch:
+
+git checkout feature-login
+
+----------------------------------------------------
+
+Create and switch:
+
+git checkout -b feature-payment
+
+----------------------------------------------------
+
+Delete branch:
+
+git branch -d feature-payment
+
+----------------------------------------------------
+
+MERGE COMMANDS
+
+git merge feature-login
+
+Purpose:
+
+Combines feature branch into current branch
+
+----------------------------------------------------
+
+REMOTE REPOSITORY COMMANDS
+
+Add remote repository:
+
+git remote add origin URL
+
+----------------------------------------------------
+
+View remote:
+
+git remote -v
+
+----------------------------------------------------
+
+Push code:
+
+git push origin main
+
+----------------------------------------------------
+
+Push first time:
+
+git push -u origin main
+
+----------------------------------------------------
+
+Clone repository:
+
+git clone URL
+
+----------------------------------------------------
+
+Download changes:
+
+git pull
+
+Purpose:
+
+Downloads and merges changes
+
+----------------------------------------------------
+
+Fetch changes:
+
+git fetch
+
+Purpose:
+
+Downloads changes only
+
+Difference:
+
+git pull
+
+Downloads + merge
+
+git fetch
+
+Downloads only
+
+----------------------------------------------------
+
+UNDO COMMANDS
+
+git restore file.txt
+
+Undo file changes
+
+----------------------------------------------------
+
+git reset HEAD file.txt
+
+Remove from staging
+
+----------------------------------------------------
+
+git revert commitID
+
+Undo specific commit safely
+
+----------------------------------------------------
+
+git reset --hard commitID
+
+Move project to older version
+
+Warning:
+
+Deletes changes permanently
+
+----------------------------------------------------
+
+STASH COMMANDS
+
+git stash
+
+Temporarily saves work
+
+----------------------------------------------------
+
+View stash:
+
+git stash list
+
+----------------------------------------------------
+
+Restore stash:
+
+git stash apply
+
+----------------------------------------------------
+
+Difference between Git and GitHub
+
+Git:
+
+Tool used for version control
+
+GitHub:
+
+Cloud platform storing repositories
+
+Simple:
+
+Git = Engine
+
+GitHub = Storage platform
+
+----------------------------------------------------
+
+REAL DEVOPS SCENARIO
+
+Developer creates code
+
+↓
+
+Pushes code to GitHub
+
+↓
+
+Jenkins detects change
+
+↓
+
+Build process starts
+
+↓
+
+Testing starts
+
+↓
+
+Docker image created
+
+↓
+
+Deploy to Kubernetes
+
+↓
+
+Production server updated
+
+----------------------------------------------------
+
+COMMON INTERVIEW QUESTIONS
+
+Q: Difference between Git and GitHub?
+
+Git:
+
+Version control tool
+
+GitHub:
+
+Cloud repository hosting service
+
+----------------------------------------------------
+
+Q: Difference between git pull and git fetch?
+
+Pull:
+
+Downloads + merges
+
+Fetch:
+
+Downloads only
+
+----------------------------------------------------
+
+Q: Difference between merge and rebase?
+
+Merge:
+
+Preserves history
+
+Rebase:
+
+Creates cleaner history
+
+----------------------------------------------------
+
+Q: Why branching is needed?
+
+Allows multiple developers to work independently.
+
+----------------------------------------------------
+
+Q: What is staging area?
+
+Temporary area where files wait before commit.
