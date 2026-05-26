@@ -1,0 +1,782 @@
+====================================================
+LINUX FOR DEVOPS
+====================================================
+
+What is Linux?
+
+Linux is an operating system similar to Windows, but
+it is mostly used in servers, cloud platforms and DevOps.
+
+In real companies most servers run Linux because:
+
+• Free and open source
+• Lightweight
+• Secure
+• Supports automation
+• Easy remote access
+• Better performance
+• Supports DevOps tools
+
+Examples of Linux Distributions:
+
+Ubuntu
+CentOS
+RedHat (RHEL)
+Debian
+Amazon Linux
+Kali Linux
+
+----------------------------------------------------
+
+Where Linux is used?
+
+• AWS EC2 servers
+• Web servers
+• Database servers
+• Docker containers
+• Kubernetes clusters
+• Cloud environments
+• Networking systems
+
+----------------------------------------------------
+
+LINUX ARCHITECTURE
+
+              User
+                ↓
+             Shell
+                ↓
+             Kernel
+                ↓
+Hardware (CPU RAM Disk)
+
+User
+
+The person giving commands.
+
+Example:
+
+ubuntu@server:~$
+
+----------------------------------------------------
+
+Shell
+
+Acts as middle layer between user and Linux system.
+
+It accepts commands and passes them to kernel.
+
+Examples:
+
+bash
+zsh
+sh
+
+Example:
+
+ls
+
+Shell understands command and sends request.
+
+----------------------------------------------------
+
+Kernel
+
+Kernel is the heart of Linux.
+
+Responsibilities:
+
+• Memory management
+• Process management
+• Device management
+• File management
+• CPU scheduling
+
+----------------------------------------------------
+
+Hardware
+
+Physical components:
+
+• CPU
+• RAM
+• Hard Disk
+• Network card
+
+----------------------------------------------------
+
+LINUX FILE SYSTEM HIERARCHY
+
+/
+
+├── bin
+├── boot
+├── dev
+├── etc
+├── home
+├── lib
+├── media
+├── mnt
+├── opt
+├── proc
+├── root
+├── tmp
+├── usr
+└── var
+
+Meaning of important directories:
+
+/bin
+
+Stores important commands
+
+Examples:
+
+ls
+cp
+mv
+cat
+
+----------------------------------------------------
+
+/boot
+
+Contains boot files
+
+Used during system startup
+
+----------------------------------------------------
+
+/dev
+
+Contains device files
+
+Examples:
+
+hard disk
+USB
+printers
+
+----------------------------------------------------
+
+/etc
+
+Stores configuration files
+
+Examples:
+
+nginx.conf
+passwd
+hostname
+
+Very important for DevOps
+
+----------------------------------------------------
+
+/home
+
+Stores user files
+
+Example:
+
+/home/nandy
+
+----------------------------------------------------
+
+/tmp
+
+Stores temporary files
+
+System may remove these automatically
+
+----------------------------------------------------
+
+/var
+
+Stores logs and changing files
+
+Example:
+
+/var/log
+
+Very important because engineers check logs here
+
+----------------------------------------------------
+
+BASIC SYSTEM COMMANDS
+
+pwd
+
+Purpose:
+
+Shows present working directory
+
+Example:
+
+pwd
+
+Output:
+
+/home/ubuntu
+
+----------------------------------------------------
+
+whoami
+
+Purpose:
+
+Shows current username
+
+Example:
+
+whoami
+
+Output:
+
+ubuntu
+
+----------------------------------------------------
+
+hostname
+
+Purpose:
+
+Displays system hostname
+
+Example:
+
+hostname
+
+----------------------------------------------------
+
+date
+
+Purpose:
+
+Shows current date and time
+
+Example:
+
+date
+
+----------------------------------------------------
+
+uptime
+
+Purpose:
+
+Shows how long server has been running
+
+Example:
+
+uptime
+
+----------------------------------------------------
+
+uname
+
+Purpose:
+
+Shows system information
+
+Examples:
+
+uname
+
+uname -a
+
+Why used?
+
+To know OS details
+
+----------------------------------------------------
+
+FILE NAVIGATION COMMANDS
+
+ls
+
+Purpose:
+
+Shows files and folders
+
+Examples:
+
+ls
+
+ls -l
+
+Detailed information
+
+ls -a
+
+Shows hidden files
+
+ls -lh
+
+Readable file sizes
+
+----------------------------------------------------
+
+cd
+
+Purpose:
+
+Change directory
+
+Examples:
+
+cd Documents
+
+cd ..
+
+Go one folder back
+
+cd ~
+
+Go home directory
+
+----------------------------------------------------
+
+tree
+
+Purpose:
+
+Shows folder structure
+
+Example:
+
+tree
+
+----------------------------------------------------
+
+find
+
+Purpose:
+
+Find files
+
+Example:
+
+find . -name file.txt
+
+----------------------------------------------------
+
+locate
+
+Purpose:
+
+Quick search for files
+
+Example:
+
+locate nginx.conf
+
+----------------------------------------------------
+
+FILE OPERATIONS
+
+touch
+
+Purpose:
+
+Creates file
+
+Example:
+
+touch notes.txt
+
+----------------------------------------------------
+
+mkdir
+
+Purpose:
+
+Creates directory
+
+Example:
+
+mkdir project
+
+mkdir project1 project2
+
+----------------------------------------------------
+
+cp
+
+Purpose:
+
+Copies files
+
+Examples:
+
+cp file1 file2
+
+cp -r folder1 folder2
+
+----------------------------------------------------
+
+mv
+
+Purpose:
+
+Move or rename files
+
+Examples:
+
+mv old.txt new.txt
+
+mv file.txt Documents/
+
+----------------------------------------------------
+
+rm
+
+Purpose:
+
+Delete files
+
+Examples:
+
+rm file.txt
+
+rm -r folder
+
+rm -rf folder
+
+Warning:
+
+-r = recursive
+-f = force delete
+
+----------------------------------------------------
+
+TEXT VIEW COMMANDS
+
+cat
+
+Purpose:
+
+Displays file content
+
+Example:
+
+cat notes.txt
+
+----------------------------------------------------
+
+head
+
+Purpose:
+
+Shows first 10 lines
+
+Example:
+
+head file.txt
+
+----------------------------------------------------
+
+tail
+
+Purpose:
+
+Shows last lines
+
+Example:
+
+tail file.txt
+
+tail -f logs.txt
+
+Real use:
+
+Live monitoring logs
+
+----------------------------------------------------
+
+less
+
+Purpose:
+
+View large files page by page
+
+Example:
+
+less logfile.txt
+
+----------------------------------------------------
+
+TEXT EDITORS
+
+nano
+
+Simple editor
+
+Example:
+
+nano file.txt
+
+Commands:
+
+CTRL + X → exit
+CTRL + O → save
+
+----------------------------------------------------
+
+vim
+
+Advanced editor
+
+Example:
+
+vim file.txt
+
+Modes:
+
+Normal mode
+Insert mode
+Command mode
+
+i → insert mode
+Esc → normal mode
+:wq → save and quit
+:q! → quit without save
+
+----------------------------------------------------
+
+PERMISSIONS
+
+Linux permissions:
+
+Read = r = 4
+Write = w = 2
+Execute = x =1
+
+Example:
+
+-rwxr-xr-x
+
+Meaning:
+
+Owner → rwx
+
+Group → r-x
+
+Others → r-x
+
+Permission values:
+
+777
+
+Full access
+
+755
+
+Owner full access
+Others read and execute
+
+644
+
+Owner read/write
+Others read only
+
+Commands:
+
+chmod 755 file.sh
+
+chmod +x script.sh
+
+chown user file.txt
+
+chgrp developers file.txt
+
+----------------------------------------------------
+
+USER MANAGEMENT
+
+useradd nandy
+
+Creates user
+
+passwd nandy
+
+Sets password
+
+userdel nandy
+
+Deletes user
+
+groupadd devops
+
+Creates group
+
+usermod -aG devops nandy
+
+Adds user to group
+
+----------------------------------------------------
+
+PROCESS MANAGEMENT
+
+ps
+
+Shows processes
+
+ps -ef
+
+Detailed processes
+
+top
+
+Live process monitoring
+
+htop
+
+Better version of top
+
+kill processid
+
+Stops process
+
+kill -9 processid
+
+Force stop process
+
+----------------------------------------------------
+
+NETWORK COMMANDS
+
+ping google.com
+
+Checks connectivity
+
+curl google.com
+
+Gets response
+
+wget fileurl
+
+Downloads files
+
+netstat -tuln
+
+Shows ports
+
+ss -tuln
+
+Alternative for netstat
+
+traceroute google.com
+
+Shows path
+
+nslookup google.com
+
+Checks DNS
+
+ip a
+
+Shows IP address
+
+----------------------------------------------------
+
+PACKAGE MANAGEMENT
+
+Ubuntu:
+
+sudo apt update
+
+Downloads package information
+
+sudo apt upgrade
+
+Updates packages
+
+sudo apt install nginx
+
+Installs package
+
+sudo apt remove nginx
+
+Removes package
+
+----------------------------------------------------
+
+COMPRESSION
+
+tar -cvf file.tar folder
+
+Creates archive
+
+tar -xvf file.tar
+
+Extracts archive
+
+gzip file.txt
+
+Compresses file
+
+unzip file.zip
+
+Extracts zip
+
+----------------------------------------------------
+
+SHELL SCRIPT INTRODUCTION
+
+Shell scripting helps automate repetitive tasks.
+
+Example:
+
+#!/bin/bash
+
+echo "Hello DevOps"
+
+name="Nandy"
+
+echo $name
+
+Example with if condition:
+
+#!/bin/bash
+
+num=10
+
+if [ $num -gt 5 ]
+then
+echo "Greater"
+else
+echo "Smaller"
+fi
+
+----------------------------------------------------
+
+REAL DEVOPS SCENARIO
+
+Problem:
+
+Website is down.
+
+Steps:
+
+1. SSH into server
+
+ssh ubuntu@IP
+
+2. Check process
+
+ps -ef
+
+3. Check logs
+
+cd /var/log
+
+tail -f application.log
+
+4. Restart service
+
+sudo systemctl restart nginx
+
+5. Verify status
+
+sudo systemctl status nginx
