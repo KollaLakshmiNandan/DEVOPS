@@ -1,0 +1,491 @@
+====================================================
+SDLC, AGILE, SCRUM AND JIRA
+====================================================
+
+What is SDLC?
+
+SDLC stands for Software Development Life Cycle.
+
+Simple meaning:
+
+SDLC is the complete process used to build software
+from requirement gathering to maintenance.
+
+Purpose:
+
+• Organize software development
+• Reduce errors
+• Deliver quality software
+• Complete project systematically
+
+----------------------------------------------------
+
+SDLC PHASES
+
+Requirements Gathering
+
+↓
+
+Planning
+
+↓
+
+Design
+
+↓
+
+Development
+
+↓
+
+Testing
+
+↓
+
+Deployment
+
+↓
+
+Maintenance
+
+----------------------------------------------------
+
+Understanding each phase
+
+1. Requirements Gathering
+
+Collect project requirements.
+
+Questions:
+
+• What should application do?
+• Who are users?
+• What features are required?
+
+Example:
+
+Food Delivery App:
+
+Requirements:
+
+• User login
+• Search restaurants
+• Payment system
+• Order tracking
+
+----------------------------------------------------
+
+2. Planning
+
+Activities:
+
+• Budget planning
+• Team allocation
+• Time estimation
+• Risk analysis
+
+----------------------------------------------------
+
+3. Design
+
+Activities:
+
+• Database design
+• UI design
+• Architecture design
+
+Example:
+
+Frontend
+
+↓
+
+Backend
+
+↓
+
+Database
+
+----------------------------------------------------
+
+4. Development
+
+Developers write code.
+
+Tools:
+
+VS Code
+Git
+
+----------------------------------------------------
+
+5. Testing
+
+Application checked for bugs.
+
+----------------------------------------------------
+
+6. Deployment
+
+Move application into server.
+
+----------------------------------------------------
+
+7. Maintenance
+
+Activities:
+
+• Bug fixes
+• Security updates
+• Add features
+
+----------------------------------------------------
+
+Problems with Traditional SDLC
+
+• Slow process
+• Hard to change requirements
+• Customer waits long time
+• Late feedback
+
+Because of these problems Agile was introduced.
+
+====================================================
+AGILE
+====================================================
+
+What is Agile?
+
+Agile is a software development methodology where
+software is developed in small parts and delivered
+continuously.
+
+Traditional:
+
+6 months work
+
+↓
+
+Complete product release
+
+Agile:
+
+2 weeks work
+
+↓
+
+Small release
+
+↓
+
+Customer feedback
+
+↓
+
+Next feature
+
+----------------------------------------------------
+
+Agile Principles
+
+• Small iterations
+• Customer feedback
+• Continuous improvement
+• Team collaboration
+• Flexible changes
+
+----------------------------------------------------
+
+Benefits of Agile
+
+• Faster delivery
+• Better customer satisfaction
+• Easy requirement changes
+• Early bug detection
+
+====================================================
+SCRUM
+====================================================
+
+What is Scrum?
+
+Scrum is a framework used to implement Agile.
+
+Simple meaning:
+
+Agile says:
+
+"Work in small iterations"
+
+Scrum says:
+
+"Follow these steps"
+
+----------------------------------------------------
+
+SCRUM WORKFLOW
+
+Product Backlog
+
+↓
+
+Sprint Planning
+
+↓
+
+Sprint Backlog
+
+↓
+
+Development
+
+↓
+
+Daily Standup
+
+↓
+
+Testing
+
+↓
+
+Sprint Review
+
+↓
+
+Sprint Retrospective
+
+----------------------------------------------------
+
+SCRUM COMPONENTS
+
+1. Product Backlog
+
+Complete list of project requirements.
+
+Example:
+
+• Login
+• Dashboard
+• Payment
+• Notifications
+
+----------------------------------------------------
+
+2. Sprint
+
+Sprint = small fixed period of work
+
+Usually:
+
+1–4 weeks
+
+Example:
+
+Sprint 1:
+
+• Login page
+• Registration page
+
+----------------------------------------------------
+
+3. Sprint Planning
+
+Team decides:
+
+• What work to do
+• Who will do work
+
+----------------------------------------------------
+
+4. Daily Standup
+
+Short meeting around 15 minutes.
+
+Questions:
+
+1. What did I do yesterday?
+
+2. What am I doing today?
+
+3. Any blockers?
+
+----------------------------------------------------
+
+5. Sprint Review
+
+Team demonstrates completed work.
+
+----------------------------------------------------
+
+6. Sprint Retrospective
+
+Discussion:
+
+• What went well?
+• What went wrong?
+• Improvements needed
+
+----------------------------------------------------
+
+SCRUM ROLES
+
+Product Owner
+
+Responsible for requirements
+
+----------------------------------------------------
+
+Scrum Master
+
+Ensures Scrum process is followed
+
+----------------------------------------------------
+
+Development Team
+
+Developers
+Testers
+DevOps Engineers
+
+====================================================
+JIRA
+====================================================
+
+What is Jira?
+
+Jira is a project management tool mainly used for Agile
+and Scrum projects.
+
+Purpose:
+
+• Track tasks
+• Assign work
+• Manage sprints
+• Track bugs
+
+----------------------------------------------------
+
+JIRA STRUCTURE
+
+Project
+
+↓
+
+Epic
+
+↓
+
+Story
+
+↓
+
+Task
+
+↓
+
+Subtask
+
+----------------------------------------------------
+
+Meaning:
+
+Project
+
+Complete application
+
+Example:
+
+Mini Finance Website
+
+----------------------------------------------------
+
+Epic
+
+Large feature
+
+Example:
+
+Authentication System
+
+----------------------------------------------------
+
+Story
+
+User requirement
+
+Example:
+
+As a user I want login functionality
+
+----------------------------------------------------
+
+Task
+
+Specific work
+
+Example:
+
+Create login API
+
+----------------------------------------------------
+
+Subtask
+
+Small work under task
+
+Example:
+
+Create login button
+
+----------------------------------------------------
+
+JIRA WORKFLOW
+
+To Do
+
+↓
+
+In Progress
+
+↓
+
+Testing
+
+↓
+
+Done
+
+----------------------------------------------------
+
+Real Company Flow
+
+Requirement comes
+
+↓
+
+Product Owner creates stories
+
+↓
+
+Stories added into Jira
+
+↓
+
+Sprint Planning
+
+↓
+
+Developers start coding
+
+↓
+
+Code pushed to GitHub
+
+↓
+
+CI/CD pipeline starts
+
+↓
+
+Deploy to production
