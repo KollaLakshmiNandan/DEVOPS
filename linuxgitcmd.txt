@@ -1,0 +1,322 @@
+====================================================
+LINUX COMMANDS WITH ROLE
+====================================================
+
+pwd → Show present working directory
+
+whoami → Show current logged-in username
+
+hostname → Show system hostname
+
+hostname -I → Show system IP address
+
+uname → Show operating system details
+
+uname -a → Show complete system information
+
+date → Show current date and time
+
+uptime → Show how long server has been running
+
+cal → Display calendar
+
+history → Show previously executed commands
+
+clear → Clear terminal screen
+
+----------------------------------------------------
+
+ls → Show files and folders
+
+ls -l → Show files with detailed information
+
+ls -a → Show hidden files
+
+ls -la → Show hidden files with details
+
+ls -lh → Show file sizes in readable format
+
+cd foldername → Move into directory
+
+cd .. → Move one folder back
+
+cd ~ → Move to home directory
+
+cd / → Move to root directory
+
+tree → Show folder structure
+
+find . -name file.txt → Search file by name
+
+locate filename → Quickly find file
+
+----------------------------------------------------
+
+touch file.txt → Create empty file
+
+mkdir folder → Create folder
+
+mkdir -p a/b/c → Create nested folders
+
+cp file1 file2 → Copy file
+
+cp -r folder1 folder2 → Copy folder
+
+mv old new → Rename or move file
+
+rm file.txt → Delete file
+
+rm -r folder → Delete folder
+
+rm -rf folder → Force delete folder
+
+rmdir folder → Remove empty folder
+
+----------------------------------------------------
+
+cat file.txt → Display file content
+
+less file.txt → View file page by page
+
+more file.txt → View file content
+
+head file.txt → Show first 10 lines
+
+head -5 file.txt → Show first 5 lines
+
+tail file.txt → Show last 10 lines
+
+tail -f logfile → Monitor logs live
+
+wc file.txt → Count words, lines and characters
+
+sort file.txt → Sort file content
+
+uniq file.txt → Remove duplicate lines
+
+cut -d ":" -f1 file.txt → Extract specific columns
+
+grep word file.txt → Search text inside file
+
+grep -i word file.txt → Ignore case while searching
+
+grep -r word folder → Search recursively
+
+----------------------------------------------------
+
+nano file.txt → Open Nano editor
+
+vim file.txt → Open Vim editor
+
+vi file.txt → Open Vi editor
+
+----------------------------------------------------
+
+chmod 777 file → Give all permissions
+
+chmod 755 file → Owner full access, others read/execute
+
+chmod +x file.sh → Make script executable
+
+chown user file → Change file owner
+
+chgrp group file → Change group ownership
+
+----------------------------------------------------
+
+useradd username → Create user
+
+passwd username → Set user password
+
+userdel username → Delete user
+
+usermod username → Modify user
+
+groupadd groupname → Create group
+
+groupdel groupname → Delete group
+
+id username → Show user ID details
+
+who → Show logged users
+
+w → Show logged users and activity
+
+----------------------------------------------------
+
+ps → Show running processes
+
+ps -ef → Show detailed process list
+
+top → Show live process usage
+
+htop → Advanced process monitoring
+
+kill PID → Stop process
+
+kill -9 PID → Force stop process
+
+killall process → Stop all processes by name
+
+jobs → Show background jobs
+
+bg → Run process in background
+
+fg → Bring process to foreground
+
+nohup command & → Run process after terminal closes
+
+----------------------------------------------------
+
+ping google.com → Check network connectivity
+
+curl URL → Get data from URL
+
+wget URL → Download files
+
+ifconfig → Show network information
+
+ip a → Show IP configuration
+
+netstat -tuln → Show open ports
+
+ss -tuln → Show listening ports
+
+nslookup google.com → Check DNS records
+
+dig google.com → Detailed DNS information
+
+traceroute google.com → Show packet path
+
+ssh user@ip → Connect remote server
+
+scp file user@ip:/path → Copy files remotely
+
+----------------------------------------------------
+
+sudo apt update → Update package list
+
+sudo apt upgrade → Upgrade packages
+
+sudo apt install nginx → Install package
+
+sudo apt remove nginx → Remove package
+
+yum install nginx → Install package in CentOS
+
+rpm -qa → List installed RPM packages
+
+----------------------------------------------------
+
+df -h → Show disk usage
+
+du -sh folder → Show folder size
+
+lsblk → Show disk partitions
+
+mount → Mount storage
+
+umount → Unmount storage
+
+fdisk -l → Show partition details
+
+----------------------------------------------------
+
+tar -cvf file.tar folder → Create archive
+
+tar -xvf file.tar → Extract archive
+
+gzip file → Compress file
+
+gunzip file.gz → Extract gzip file
+
+zip file.zip file.txt → Create zip
+
+unzip file.zip → Extract zip
+
+----------------------------------------------------
+
+systemctl start nginx → Start service
+
+systemctl stop nginx → Stop service
+
+systemctl restart nginx → Restart service
+
+systemctl status nginx → Check service status
+
+systemctl enable nginx → Start service on boot
+
+systemctl disable nginx → Disable startup service
+
+----------------------------------------------------
+
+journalctl → View system logs
+
+dmesg → View kernel logs
+
+tail -f /var/log/syslog → Monitor logs live
+
+
+======================================================
+GIT COMMANDS WITH ROLES
+======================================================
+
+git init → Create new repository
+
+git status → Show file status
+
+git add file → Add file to staging
+
+git add . → Add all files
+
+git commit -m "msg" → Save changes
+
+git log → Show commit history
+
+git log --oneline → Show short commit history
+
+git diff → Show file changes
+
+git branch → Show branches
+
+git branch feature → Create branch
+
+git checkout feature → Switch branch
+
+git checkout -b feature → Create and switch branch
+
+git merge feature → Merge branch
+
+git clone URL → Copy repository
+
+git remote add origin URL → Connect remote repo
+
+git push origin main → Upload code
+
+git push -u origin main → Upload and set tracking
+
+git pull → Download and merge changes
+
+git fetch → Download changes only
+
+git restore file → Undo changes
+
+git reset HEAD file → Remove staged file
+
+git reset --hard → Remove all changes
+
+git revert commitID → Undo specific commit
+
+git stash → Temporarily save work
+
+git stash list → Show stash list
+
+git stash apply → Restore stash
+
+git tag v1.0 → Create version tag
+
+git reflog → Show Git activity history
+
+git cherry-pick commitID → Copy commit from another branch
+
+git blame file → Show who changed each line
